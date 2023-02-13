@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nomes_tipo_fisico">
+        <item>@string/endomorfo</item>
+        <item>@string/mesomorfo</item>
+        <item>@string/ecotomorfo</item>
+    </string-array>
+
+    <string-array name="imagens_tipo_fisico">
+        <item>@drawable/endomorfo</item>
+        <item>@drawable/mesomorfo</item>
+        <item>@drawable/ectomorfo</item>
+    </string-array>
+
+</resources>

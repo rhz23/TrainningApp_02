@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TrainningApp</string>
+    <string name="nome">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="data_nascimento">Data de Nascimento</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="tipo_fisico">Tipo Fisico</string>
+    <string name="endomorfo">Endomorfo</string>
+    <string name="mesomorfo">Mesomorfo</string>
+    <string name="ecotomorfo">Ectomorfo</string>
+    <string name="objetivos">Objetivos</string>
+    <string name="saude">Saúde</string>
+    <string name="perda_de_peso">Perda de peso</string>
+    <string name="ganho_massa_muscular">Ganho de massa muscular</string>
+    <string name="ganho_de_forca">Ganho de força</string>
+    <string name="ganho_de_explosao">Ganho de Explosão</string>
+    <string name="select_date">Select Date:</string>
+    <string name="salvar">Salvar</string>
+    <string name="limpar">Limpar</string>
+    <string name="campos_cadastro_foram_limpos">Os campos foram limpos!</string>
+    <string name="pelo_menos_um_objetivo_selecionado">Pelo menos um objetivo selecionado</string>
+    <string name="os_campos_precisam_ser_preenchidos">\"Os seguintes campos precisam ser preenchidos: \"</string>
+    <string name="cadastro_efetuado_com_sucesso">Cadastro efetuado com sucesso!</string>
+</resources>
