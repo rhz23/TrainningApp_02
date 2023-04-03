@@ -1,14 +1,10 @@
- package com.rzaninelli.trainningapp;
+package com.rzaninelli.trainningapp.activities;
 
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -18,23 +14,26 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
+import com.rzaninelli.trainningapp.R;
+import com.rzaninelli.trainningapp.adapters.TipoFisicoAdapter;
+import com.rzaninelli.trainningapp.entities.TipoFisico;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 
- public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-     private TextView editTextTextPersonName, editTextNumberDecimalAltura, editTextNumberDecimalPeso;
+    private TextView editTextTextPersonName, editTextNumberDecimalAltura, editTextNumberDecimalPeso;
 
-     private RadioGroup radioGroupSexo;
+    private RadioGroup radioGroupSexo;
 
-     private Spinner spinnerTipoFisico;
+    private Spinner spinnerTipoFisico;
 
-     private CheckBox cbSaude, cbPerdaDePeso, cbGanhoMassaMuscular, cbGanhoForca, cbGanhoExplosao;
+    private CheckBox cbSaude, cbPerdaDePeso, cbGanhoMassaMuscular, cbGanhoForca, cbGanhoExplosao;
 
-     private EditText dateTXT;
-     private ImageView calendar;
-     private int mDate, mMonth, mYear;
+    private EditText dateTXT;
+    private ImageView calendar;
+    private int mDate, mMonth, mYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,21 +78,21 @@ import java.util.Calendar;
         cbGanhoExplosao = findViewById(R.id.checkBoxGanhoExplosao);
     }
 
-     private void popularSpinnerPaises() {
+    private void popularSpinnerPaises() {
         String[] nomes = getResources().getStringArray(R.array.nomes_tipo_fisico);
         TypedArray imagemtiposFisicos = getResources().obtainTypedArray(R.array.imagens_tipo_fisico);
 
-         ArrayList<TipoFisico> tiposFisicos = new ArrayList();
+        ArrayList<TipoFisico> tiposFisicos = new ArrayList();
 
-         for (int cont = 0; cont < nomes.length; cont++) {
-             tiposFisicos.add(new TipoFisico(nomes[cont], imagemtiposFisicos.getDrawable(cont)));
-         }
+        for (int cont = 0; cont < nomes.length; cont++) {
+            tiposFisicos.add(new TipoFisico(nomes[cont], imagemtiposFisicos.getDrawable(cont)));
+        }
 
-         TipoFisicoAdapter tipoFisicoAdapter = new TipoFisicoAdapter(this, tiposFisicos);
-         spinnerTipoFisico.setAdapter(tipoFisicoAdapter);
-     }
+        TipoFisicoAdapter tipoFisicoAdapter = new TipoFisicoAdapter(this, tiposFisicos);
+        spinnerTipoFisico.setAdapter(tipoFisicoAdapter);
+    }
 
-     public void limparCampos(View view) {
+    public void limparCampos(View view) {
         editTextTextPersonName.setText(null);
         editTextNumberDecimalAltura.setText(null);
         editTextNumberDecimalPeso.setText(null);
@@ -102,13 +101,13 @@ import java.util.Calendar;
 
         dateTXT.setText(null);
 
-         cbSaude.setChecked(false);
-         cbPerdaDePeso.setChecked(false);
-         cbGanhoMassaMuscular.setChecked(false);
-         cbGanhoForca.setChecked(false);
-         cbGanhoExplosao.setChecked(false);
+        cbSaude.setChecked(false);
+        cbPerdaDePeso.setChecked(false);
+        cbGanhoMassaMuscular.setChecked(false);
+        cbGanhoForca.setChecked(false);
+        cbGanhoExplosao.setChecked(false);
 
-         Toast.makeText(this, R.string.campos_cadastro_foram_limpos, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.campos_cadastro_foram_limpos, Toast.LENGTH_LONG).show();
     }
 
     public void salvarCadastro(View view) {
@@ -160,4 +159,4 @@ import java.util.Calendar;
 
     }
 
- }
+}

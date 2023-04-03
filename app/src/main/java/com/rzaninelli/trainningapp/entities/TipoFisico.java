@@ -1,4 +1,4 @@
-package com.rzaninelli.trainningapp;
+package com.rzaninelli.trainningapp.entities;
 
 import android.graphics.drawable.Drawable;
 

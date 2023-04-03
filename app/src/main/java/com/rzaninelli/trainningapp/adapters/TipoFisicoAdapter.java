@@ -1,4 +1,4 @@
-package com.rzaninelli.trainningapp;
+package com.rzaninelli.trainningapp.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.rzaninelli.trainningapp.R;
+import com.rzaninelli.trainningapp.entities.TipoFisico;
 
 import java.util.List;
 
